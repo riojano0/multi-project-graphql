@@ -1,0 +1,19 @@
+schema {
+    query: QueryType
+    mutation: Mutation
+}
+
+type QueryType {
+    characters : [Character]
+    character(id: ID!): Character
+}
+
+type Character {
+    id: ID!
+    name: String!
+    job: String!
+}
+
+type Mutation {
+    createCharacter(name: String!, job: String!): Character
+}
