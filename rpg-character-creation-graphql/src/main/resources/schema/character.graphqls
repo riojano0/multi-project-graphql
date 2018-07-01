@@ -1,6 +1,6 @@
 schema {
     query: QueryType
-    mutation: Mutation
+    mutation: MutationType
 }
 
 type QueryType {
@@ -10,10 +10,49 @@ type QueryType {
 
 type Character {
     id: ID!
+    experience: Long
+    level: Int
     name: String!
-    job: String!
+    race: Race!
+    classType: ClassType!
+    alignment: Alignment!
+    strength: Int!
+    agility: Int!
+    constitution: Int!
+    intelligence: Int!
+    charisma: Int!
 }
 
-type Mutation {
-    createCharacter(name: String!, job: String!): Character
+enum Race {
+    HUMAN
+    UNDEAD
+    ELF
+    TROLL
+}
+
+enum ClassType {
+    ROGUE
+    WARRIOR
+    HEALER
+    BERSERK
+}
+
+enum Alignment  {
+    EVIL
+    NEUTRAL
+    GOOD
+}
+
+type MutationType {
+        createCharacter(
+        name: String!,
+        race: Race!,
+        classType: ClassType!,
+        alignment: Alignment!,
+        strength: Int!,
+        agility: Int!,
+        constitution: Int!,
+        intelligence: Int!,
+        charisma: Int!)
+        : Character
 }

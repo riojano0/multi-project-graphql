@@ -1,26 +1,23 @@
 package com.montivero.poc.domain;
 
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
 public class Character {
 
-    private Long id ;
+    private Long id;
+    private Long experience;
+    private int level;
     private String name;
-    private String job;
+    private Race race;
+    private ClassType classType;
+    private Alignment alignment;
+    private int strength;
+    private int agility;
+    private int constitution;
+    private int intelligence;
+    private int charisma;
 
-    public Character(Long id, String name, String job) {
-        this.id = id;
-        this.name = name;
-        this.job = job;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getJob() {
-        return job;
-    }
 }
