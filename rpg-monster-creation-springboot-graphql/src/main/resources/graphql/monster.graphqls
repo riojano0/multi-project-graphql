@@ -1,0 +1,31 @@
+type Query {
+    monsters: [Monster]
+}
+
+type Monster {
+    id: Int
+    level: Int!
+    name: String!
+    race: Race!
+    strength: Int!
+    agility: Int!
+    constitution: Int!
+    intelligence: Int!
+    charisma: Int!
+    detail: Detail
+}
+
+enum Race {
+    DRAGON
+    CELESTIAL
+    SLIME
+}
+
+type Detail {
+    live: Int
+    debility: String
+}
+
+type Mutation {
+    createNewMonster( name: String! ) : Monster
+}
