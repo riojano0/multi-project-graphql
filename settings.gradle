@@ -1,4 +1,5 @@
 rootProject.name = 'multi-project-graphql'
 
 include 'rpg-character-creation-graphql'
+include 'rpg-monster-creation-springboot-graphql'
 
