@@ -23,7 +23,7 @@ public class CharactersDataFetcher implements DataFetcher<List<Character>> {
                 .build();
         Character character1 = Character.builder()
                 .id(1L)
-                .name("testName0")
+                .name("testName1")
                 .race(Race.HUMAN)
                 .classType(ClassType.WARRIOR)
                 .alignment(Alignment.GOOD)

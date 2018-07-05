@@ -1,14 +1,6 @@
 group 'com.montivero.poc'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
 buildscript {
     repositories {
         maven {
@@ -20,16 +12,23 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
 apply plugin: "org.akhikhl.gretty"
 
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
 dependencies {
-    compile group: 'com.graphql-java', name: 'graphql-java', version: '9.0'
-    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
-    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    compile 'com.graphql-java:graphql-java:9.0'
+    compile 'javax.servlet:javax.servlet-api:4.0.1'
+    compile 'org.slf4j:slf4j-simple:1.7.25'
+    compile 'org.apache.commons:commons-lang3:3.7'
     compile 'com.graphql-java:graphql-java-servlet:5.0.1'
 
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.0'
+    compileOnly 'org.projectlombok:lombok:1.18.0'
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'junit:junit:4.12'
 }

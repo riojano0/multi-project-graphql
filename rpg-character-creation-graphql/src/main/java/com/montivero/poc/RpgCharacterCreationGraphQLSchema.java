@@ -15,13 +15,12 @@ import graphql.servlet.SimpleGraphQLServlet;
 import java.io.File;
 import java.util.List;
 import java.util.Objects;
-import java.util.logging.Logger;
 
 import static graphql.schema.idl.RuntimeWiring.newRuntimeWiring;
 
 public class RpgCharacterCreationGraphQLSchema {
 
-    private static final String SCHEMA_CHARACTER_GRAPHQLS = "schema/character.graphqls";
+    private static final String SCHEMA_CHARACTER_GRAPHQLS = "graphql/character.graphqls";
 
     public SimpleGraphQLServlet.Builder getSchemaSimpleGraphQLServletBuilder() {
         return new SimpleGraphQLServlet.Builder(getSchema());
