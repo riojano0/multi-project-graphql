@@ -9,5 +9,12 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
+task deployRpgCharacter {
+    println('Start The application for characters')
 }
+deployRpgCharacter.dependsOn(":rpg-character-creation-graphql:appRun")
+
+task deployRpgMonster {
+    println('Start The application for monster')
+}
+deployRpgMonster.dependsOn(":rpg-monster-creation-springboot-graphql:bootRun")
